@@ -1,6 +1,6 @@
 package studentgradebook;
 
-import com.alee.laf.WebLookAndFeel;
+//import com.alee.laf.WebLookAndFeel;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -59,7 +59,7 @@ public class StudentGradebook {
     }
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException {
-        UIManager.setLookAndFeel ( new WebLookAndFeel () );
+        //UIManager.setLookAndFeel ( new WebLookAndFeel () );
         StudentGradebook begin = new StudentGradebook();
         System.out.println(courses.size());
         initialImport();
@@ -470,7 +470,9 @@ public class StudentGradebook {
     }
     public static void initialImport() {
         String workingDir = System.getProperty("user.dir");
-        String filepath = workingDir + File.separator + "\\src\\studentgradebook\\tmp\\";
+        boolean osIsMac = false;
+        //String filepath = workingDir + File.separator + "\\src\\studentgradebook\\tmp\\";
+        String filepath = workingDir + File.separator + "/src/studentgradebook/tmp/";
         File folder = new File(filepath);
         File[] listOfFiles = folder.listFiles();
 
